@@ -1,0 +1,51 @@
+@use 'variable';
+
+// Responsive
+@mixin mobile {
+  @media screen and (max-width: variable.$mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: variable.$tablet) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (max-width: variable.$pc) {
+    @content;
+  }
+}
+
+//Position
+@mixin position($x, $xvalue, $y, $yvalue) {
+  position: absolute;
+  #{$x}: $xvalue;
+  #{$y}: $yvalue;
+  @if $xvalue == 50% and $yvalue == 50% {
+    transform: translate(-50%, -50%);
+  }@else if $xvalue == 50% {
+    transform: translateX(-50%);
+  }@else if $yvalue == 50% {
+    transform: translateY(-50%);
+  }
+}
+
+// Background
+@mixin bg($name, $path: '../images/', $format: 'png', $x: null, $y: null, $color: null, $size: null) {
+  background: $color url('#{$path}#{$name}.#{$format}') no-repeat $x $y;
+  background-size: $size;
+}
+
+// IR
+@mixin hide {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}

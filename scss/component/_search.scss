@@ -1,0 +1,23 @@
+@use '../helper';
+
+.search {
+  &__button {
+    @include helper.bg('btn_search', $x: right 20px, $y: center);
+    position: relative;
+    padding: 1.5rem 1.3rem;
+    width: 70rem;
+    border: 1px solid helper.$purple;
+    border-radius: 10px;
+    text-align: left;
+    color: helper.$grey;
+    @include helper.pc{
+      width: 30vw;
+    }
+    @include helper.tablet{
+      width: 25vw;
+    }
+    @include helper.mobile {
+      display: none;
+    }
+  }
+}

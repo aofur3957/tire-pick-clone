@@ -1,0 +1,32 @@
+@use '../helper';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: helper.$black;
+}
+
+button {
+  cursor: pointer;
+  background: helper.$white;
+  border: none;
+  font-size: 1.6rem;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.hide {
+  @include helper.hide; 
+}

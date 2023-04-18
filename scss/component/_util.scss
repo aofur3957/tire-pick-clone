@@ -1,0 +1,65 @@
+@use '../helper';
+
+.util {
+  &__list {
+    display: flex;
+    gap: 2rem;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      + li {
+        &:before {
+          content: '';
+          width: 1px;
+          height: 10px;
+          background: helper.$light-grey;
+        }
+      }
+      a {
+        color: helper.$dark-grey;
+      }
+      @include helper.mobile {
+        &.hidden {
+          display: none;
+        }
+        &:before {
+          display: none;
+        }
+      }
+    }
+    [aria-hidden] { 
+      display: none;
+    }
+  }
+  @include helper.mobile {
+    &__list {
+      gap: 0;
+      li {
+        a, button {
+          width: 5.4rem;
+          height: 7rem;
+          span {
+            @include helper.hide;
+          }
+        }
+      }
+      [aria-hidden] {
+        display: flex;
+        button {
+          @include helper.bg('icon_bar', $x: center, $y: center);
+        }
+      }
+    }
+    &__cart {
+      a {
+        @include helper.bg('icon_user', $x: center, $y: center);
+      }
+    }
+    &__mypage {
+      a {
+        @include helper.bg('icon_shopping', $x: center, $y: center);
+      }
+    }
+  }
+}

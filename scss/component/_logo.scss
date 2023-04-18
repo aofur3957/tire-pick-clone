@@ -1,0 +1,11 @@
+@use '../helper';
+
+.logo {
+  font-size: 0;
+  a {
+    @include helper.bg('h1_logo', $size: contain);
+    display: inline-block;
+    width: 18.2rem;
+    height: 2.4rem;
+  }
+}

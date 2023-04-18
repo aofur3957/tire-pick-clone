@@ -1,0 +1,22 @@
+@use '../helper';
+
+.gnb {
+  &__list {
+    display: flex;
+    gap: 4rem;
+    li {
+      a {
+        font-size: 1.8rem;
+        color: #333;
+      }
+    }
+  }
+  @include helper.tablet {
+    &__list {
+      gap: 2rem;
+    }
+  }
+  @include helper.mobile {
+    display: none;
+  }
+}

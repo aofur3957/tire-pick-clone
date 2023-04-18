@@ -1,0 +1,52 @@
+@use '../helper';
+
+.m-gnb {
+  display: none;
+  position: absolute;
+  left: 0; top: 0;
+  right: 0; bottom: 0;
+  background: helper.$white;
+  &__list {
+    padding-top: 7.1rem;
+    li {
+      a {
+        display: block;
+        height: 60px;
+        padding: 0 2rem;
+        font-size: 1.9rem;
+        line-height: 60px;
+        &:hover, &:focus {
+          background: helper.$greyf6;
+        }
+      }
+      &.last {
+        &::after {
+          display: block;
+          content: '';
+          margin: 1.3rem 0;
+          border-bottom: 1px solid helper.$light-grey;
+        }
+      }
+      &.bold {
+        a {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .app {
+    padding: 0 2rem;
+    font-size: 0;
+    &__text {
+      padding: 1.5rem 0 2rem;
+      color: helper.$grey5a;
+      font-size: 1.6rem;
+    }
+    &__ios {
+      margin-right: 0.8rem;
+    }
+  }
+  .btn-close {
+    @include helper.position(right, 2rem, top, 1.4rem);
+  }
+}

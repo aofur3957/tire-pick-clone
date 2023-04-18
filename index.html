@@ -6,8 +6,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>타이어픽</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+  <script src="js/main.js"></script>
 </head>
 <body>
-  
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="logo"><a href="#"><span class="hide">TIRE PICK</span></a></h1>
+      <div class="search">
+        <button class="search__button">
+          타이어, 배터리 검색
+        </button>
+      </div>
+      <nav class="gnb">
+        <ul class="gnb__list">
+          <li><a href="#">타이어</a></li>
+          <li><a href="#">배터리</a></li>
+          <li><a href="#">이벤트</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+      </nav>
+      <div class="header__util">
+        <nav class="util">
+          <ul class="util__list">
+            <li class="hidden"><a href="#">이용안내</a></li>
+            <li class="util__cart"><a href="#"><span>마이페이지</span></a></li>
+            <li class="util__mypage"><a href="#"><span>장바구니</span></a></li>
+            <li aria-hidden="true"><button class="btn-bar" href="#"><span>메뉴</span></button></li>
+            <li class="hidden"><a href="#">로그인</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <aside class="m-gnb">
+    <nav>
+      <ul class="m-gnb__list">
+        <li class="last"><a href="#">로그인</a></li>
+        <li class="bold"><a href="#">타이어</a></li>
+        <li class="bold"><a href="#">배터리</a></li>
+        <li class="bold"><a href="#">이벤트</a></li>
+        <li class="bold last"><a href="#">고객센터</a></li>
+        <li><a href="#">마이페이지</a></li>
+        <li><a href="#">장바구니</a></li>
+        <li><a href="#">장착점 제휴신청</a></li>
+        <li class="last"><a href="#">이용안내</a></li>
+      </ul>
+    </nav>
+    <div class="app">
+      <p class="app__text">타이어픽 앱 설치하면 <strong class="txt-purple">세차가 100원</strong></p>
+      <a href="#" class="app__ios"><img src="images/btn_ios.png" alt="애플스토어"></a>
+      <a href="#" class="app__android"><img src="images/btn_android.png" alt="구글플레이"></a>
+    </div>
+    <button class="btn-close" aria-label="닫기"></button>
+  </aside>
 </body>
 </html>
