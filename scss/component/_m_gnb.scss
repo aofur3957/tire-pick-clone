@@ -6,6 +6,7 @@
   left: 0; top: 0;
   right: 0; bottom: 0;
   background: helper.$white;
+  z-index: 10000;
   &__list {
     padding-top: 7.1rem;
     li {

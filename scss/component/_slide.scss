@@ -1,0 +1,67 @@
+@use '../helper';
+
+.visual {
+  position: relative;
+  height: 500px;
+  background: helper.$blue;
+  .swiper-pagination {
+    @include helper.position(left, 50%, bottom, 1rem);
+    @include helper.pc {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+     }
+    @include helper.mobile(){
+      display: none;
+    }
+    display: flex;
+    gap: 1.6rem;
+    padding: 0.4rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 7px;
+    font-size: 1.4rem;
+    color: helper.$grey5a;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .swiper-pagination-bullet {
+    display: block;
+    padding: 1rem 1.8rem;
+    text-align: center;
+    transition: all 0.8s;
+    border-radius: 7px;
+    white-space: nowrap;
+  }
+  .swiper-pagination-bullet-active {
+    background: helper.$white;
+  }
+  .swiper-pagination-mobile {
+    @include helper.position(bottom, 1.3rem, right, 2.6rem);
+    @include helper.mobile(){
+      display: block;
+    }
+    display: none;
+    padding: 0 1.2rem;
+    width: 7.6rem;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 13px;
+    font-size: 1.2rem;
+    color: helper.$black;
+    &::after {
+      content: '';
+      @include helper.position(right, 1.2rem, top, 50%);
+      width: 14px;
+      height: 1px;
+      background: helper.$black;
+    }
+    &::before {
+      content: '';
+      @include helper.position(right, 1.9rem, top, 50%);
+      transform: translate(50%, -50%);
+      width: 1px;
+      height: 14px;
+      background: helper.$black;
+    }
+  }
+}
