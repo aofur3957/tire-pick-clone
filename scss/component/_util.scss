@@ -62,4 +62,13 @@
       }
     }
   }
+  @include helper.mini {
+    &__list{
+      li {
+        a, button {
+          width: 4.4rem;
+        }
+      }
+    }
+  }
 }

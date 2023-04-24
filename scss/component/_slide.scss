@@ -4,6 +4,9 @@
   position: relative;
   height: 500px;
   background: helper.$blue;
+  &__tit {
+    @include helper.hide;
+  }
   .swiper-pagination {
     @include helper.position(left, 50%, bottom, 1rem);
     @include helper.pc {

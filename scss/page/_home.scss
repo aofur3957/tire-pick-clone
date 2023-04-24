@@ -1,5 +1,8 @@
 @use '../helper';
+@use '../common';
+@use 'sass:list';
 
+// 헤더
 .header {
   padding-top: 4rem;
   &__inner {
@@ -34,6 +37,102 @@
       position: static;
       border-bottom: none;
       padding: 0;
+    }
+  }
+}
+
+// 다이렉트 네비게이션
+$nav-bg: #e6f2ff, #d6ebe0, #ffebeb, #ffcda9;
+
+.direct-nav {
+  @extend %layout;
+  padding: 6rem 2rem;
+  &__tit {
+    @include helper.hide;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem 2.4rem;
+    @include helper.mobile {
+      gap: 2.5rem 3.5rem;
+    }
+    @include helper.mini {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__item {
+    span {
+      font-size: 1.3rem;
+      color: helper.$grey6f;
+      @include helper.tablet {
+        font-size: 1.1rem;
+      }
+      @include helper.mobile{
+        display: none;
+      }
+    }
+    strong {
+      font-size: 2.2rem;
+      color: helper.$black;
+      @include helper.tablet {
+        font-size: 1.8rem;
+      }
+      @include helper.mobile{
+        display: none;
+      }
+    }
+    .mobile {
+      padding-top: 1.3rem;
+      text-align: center;
+      font-size: 1.5rem;
+      color: helper.$black;
+    }
+  }
+  @for $i from 1 to 9 {
+    &__ico#{$i} {
+      a {
+        @if ($i <= 4){
+          @include helper.bg('ico_direct#{$i}', $format: 'svg', $dir: right, $x: 3rem, $y: center);
+          border: 1px solid helper.$light-grey;
+        }@else {
+          @include helper.bg('ico_direct#{$i}', $dir: right, $x: 3rem, $y: center, $color: list.nth($nav-bg, ($i - 4)), $size: 5.6rem);
+        }
+        @include helper.tablet {
+          background-image: none;
+        }
+        @include helper.mobile {
+          @if ($i <= 4){
+            @include helper.bg('ico_direct#{$i}', $format: 'svg', $x: center, $y: center);
+            border: 1px solid helper.$light-grey;
+            @include helper.mobile {
+              border: none;
+              background-color: helper.$light-grey;
+            }
+          }@else {
+            @include helper.bg('ico_direct#{$i}', $x: center, $y: center, $color: list.nth($nav-bg, ($i - 4)), $size: 5.6rem);
+          }
+        }
+      }
+    }
+  }
+  a {
+    display: flex;
+    padding: 0 3rem;
+    border-radius: 1.5rem;
+    box-shadow: 2px 2px 5px helper.$light-grey;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+    gap: 1.2rem;
+    height: 12rem;
+    @include helper.tablet {
+      padding: 0 2rem;
+    }
+    @include helper.mobile {
+      padding: 0;
+      box-shadow: none;
+      border-radius: 2.6rem;
     }
   }
 }

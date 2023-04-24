@@ -8,6 +8,9 @@
 
 html {
   font-size: 62.5%;
+  @include helper.mini{
+    font-size: 50%;
+  }
 }
 
 a {

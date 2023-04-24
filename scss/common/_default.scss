@@ -1,0 +1,16 @@
+@use '../helper';
+
+.mobile {
+  display: none;
+  @include helper.mobile{
+    display: block;
+  } 
+}
+
+%layout {
+  margin: 0 auto;
+  width: 1184px;
+  @include helper.laptop{
+    width: 100%;
+  }
+}

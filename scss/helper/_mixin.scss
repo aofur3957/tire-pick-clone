@@ -1,6 +1,12 @@
 @use 'variable';
 
 // Responsive
+@mixin mini {
+  @media screen and (max-width: variable.$mini){
+    @content;
+  }
+}
+
 @mixin mobile {
   @media screen and (max-width: variable.$mobile) {
     @content;
@@ -9,6 +15,12 @@
 
 @mixin tablet {
   @media screen and (max-width: variable.$tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: variable.$laptop) {
     @content;
   }
 }
@@ -34,9 +46,11 @@
 }
 
 // Background
-@mixin bg($name, $path: '../images/', $format: 'png', $x: null, $y: null, $color: null, $size: null) {
-  background: $color url('#{$path}#{$name}.#{$format}') no-repeat $x $y;
+@mixin bg($name, $path: '../images/', $format: 'png', $dir: null, $x: null, $y: null, $color: null, $size: null) {
+  background: $color url('#{$path}#{$name}.#{$format}') no-repeat $dir $x $y;
   background-size: $size;
+
+  //
 }
 
 // IR
