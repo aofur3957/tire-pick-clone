@@ -172,7 +172,7 @@ $nav-bg: #e6f2ff, #d6ebe0, #ffebeb, #ffcda9;
       position: static;
       margin-top: 4.5rem;
     }
-  } 
+  }
 }
 
 // 이벤트
@@ -196,7 +196,7 @@ $nav-bg: #e6f2ff, #d6ebe0, #ffebeb, #ffcda9;
     @include helper.mobile {
       background-position: center top;
       text-align: center;
-      padding-top: 22rem;
+      padding: 22rem 0 3rem;
     }
   }
   &__tit {
@@ -210,6 +210,26 @@ $nav-bg: #e6f2ff, #d6ebe0, #ffebeb, #ffcda9;
     font-size: 2rem;
     @include helper.mobile {
       display: none;
+    }
+  }
+}
+
+// 베스트 타이어
+.best {
+  @extend %layout-center;
+  padding: 6.5rem 0 10rem;
+  position: relative;
+  @include helper.laptop {
+    padding: 6.5rem 2rem 10rem;
+  }
+  .btn-more {
+    @include helper.position(right, 0.3rem, top, 7.7rem);
+    @include helper.laptop {
+      right: 2rem;
+    }
+    @include helper.mobile {
+      position: static;
+      margin-top: 4.5rem;
     }
   }
 }
