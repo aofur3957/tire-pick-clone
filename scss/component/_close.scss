@@ -1,7 +1,0 @@
-@use '../helper';
-
-.btn-close {
-  @include helper.bg('btn_close', $x: center, $y: center);
-  width: 4rem;
-  height: 4rem;
-}

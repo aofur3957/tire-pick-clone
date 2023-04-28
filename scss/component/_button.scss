@@ -1,0 +1,24 @@
+@use '../helper';
+
+.btn {
+  &-close {
+    @include helper.bg('btn_close', $x: center, $y: center);
+    width: 4rem;
+    height: 4rem;
+  }
+  &-more {
+    @include helper.bg('bu_arr_right', $x: right);
+    padding-right: 1.6rem;
+    font-size: 1.5rem;
+    color: helper.$dark-grey;
+    @include helper.mobile {
+      display: block;
+      padding: 0;
+      line-height: 5.5rem;
+      background: none;
+      border: 1px solid helper.$light-grey;
+      border-radius: 10px;
+      text-align: center;
+    }
+  }
+}

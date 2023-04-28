@@ -4,13 +4,15 @@
 
 // 헤더
 .header {
-  padding-top: 4rem;
-  &__inner {
+  padding-top: 3.2rem;
+  &__wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.6rem 4rem;
+    height: 5rem;
     border-bottom: 1px solid helper.$light-grey;
+    box-sizing: content-box;
   }
   &__util {
     @include helper.position(left, 0, top, 0);
@@ -41,12 +43,25 @@
   }
 }
 
+// 비주얼 
+.visual {
+  &__search {
+    padding: 0 2.5rem;
+  }
+}
+
 // 다이렉트 네비게이션
 $nav-bg: #e6f2ff, #d6ebe0, #ffebeb, #ffcda9;
 
 .direct-nav {
-  @extend %layout;
+  @extend %layout-center;
   padding: 6rem 2rem;
+  margin-top: 1.2rem;
+  @include helper.mobile {
+    border-top: 15px solid helper.$light-grey;
+    border-bottom: 15px solid helper.$light-grey;
+    padding: 3rem 2rem;
+  }
   &__tit {
     @include helper.hide;
   }
@@ -136,3 +151,27 @@ $nav-bg: #e6f2ff, #d6ebe0, #ffebeb, #ffcda9;
     }
   }
 }
+
+// md 추천제품
+.md-pick {
+  position: relative;
+  padding-bottom: 6rem;
+  @extend %layout-center;
+  @include helper.laptop {
+    padding: 0 2rem;
+  }
+  @include helper.mobile {
+    padding: 3.5rem 2rem 5.5rem;
+  }
+  .btn-more {
+    @include helper.position(right, 0.3rem, top, 1.2rem);
+    @include helper.laptop {
+      right: 2rem;
+    }
+    @include helper.mobile {
+      position: static;
+      margin-top: 4.5rem;
+    }
+  } 
+}
+

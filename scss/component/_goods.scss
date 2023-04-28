@@ -1,0 +1,95 @@
+@use '../helper';
+
+.goods {
+  display: block;
+  position: relative;
+  width: 27.8rem;
+  margin-top: 3.5rem;
+  border-radius: 6px;
+  line-height: 1;
+  @include helper.laptop {
+    width: 23.5%;
+  }
+  @include helper.tablet {
+    width: 49%;
+  }
+  &-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+    @include helper.laptop {
+      gap: 2%;
+    }
+  }
+  &__pic {
+    position: relative;
+    height: 27.8rem;
+    background: helper.$greyf6;
+    @include helper.tablet {
+      height: 0;
+      padding-top: 100%;
+    }
+  }
+  &__thum {
+    @include helper.position(left, 50%, top, 50% );
+    width: 70%;
+    height: 70%;
+  }
+  &__logo {
+    @include helper.position(right, 2rem, top, 2rem);
+    height: 1rem;
+  }
+  &__brand {
+    font-size: 1.5rem;
+    color: helper.$grey5a;
+  }
+  &__model {
+    font-size: 1.7rem;
+    color: helper.$black;
+  }
+  &__tit {  
+    font-size: 1.5rem;
+    color: helper.$grey5a;
+    @include helper.mobile {
+      @include helper.ellipsis;
+      width: 80%;
+    }
+  }
+  &__priceinfo {
+    display: flex;
+    gap: 0.9rem;
+  }
+  &__sale {
+    font-size: 2rem;
+    color: helper.$skyblue;
+  }
+  &__price {
+    font-size: 2rem;
+    color: helper.$black;
+  }
+  &__hash {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    span {
+      padding: 0 0.7rem;
+      font-size: 1.4rem;
+      color: helper.$dark-grey;
+      line-height: 2.4rem;
+      border-radius: 4px;
+      background: helper.$greyf6;
+    }
+  }
+  &__rating {
+    @include helper.bg('ico_rating', $x: left);
+    .rating {
+      padding-left: 1.3rem;
+      font-size: 1.5rem;
+      color: helper.$black;
+    }
+    .review {
+      font-size: 1.5rem;
+      color: #000;
+    }
+  }
+}

@@ -35,7 +35,7 @@ $(function () {
   function excuteSlide(){
     $paging = ['ERS 출동 서비스', '4월에도 할인', '토스페이 캐시백', '친구 초대 이벤트', '브리지스톤 할인', '리뷰 이벤트', '앱 설치 혜택', '피렐리 무상교환', '삼성화재 이벤트', '자동세차 100원'];
 
-    const swiperBullets = new Swiper('.visual', {
+    const swiperBullets = new Swiper('.visual-slide', {
       loop: true,
       pagination: {
         el: '.swiper-pagination',
@@ -46,7 +46,7 @@ $(function () {
       }
     })
 
-    const swiperFraction = new Swiper('.visual', {
+    const swiperFraction = new Swiper('.visual-slide', {
       loop: true,
       pagination: {
         el: '.swiper-pagination-mobile',

@@ -12,13 +12,8 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__inner">
+    <div class="header__wrap">
       <h1 class="logo"><a href="#"><span class="hide">TIRE PICK</span></a></h1>
-      <div class="search">
-        <button class="search__button">
-          타이어, 배터리 검색
-        </button>
-      </div>
       <nav class="gnb">
         <ul class="gnb__list">
           <li><a href="#">타이어</a></li>
@@ -62,25 +57,34 @@
     <button class="btn-close" aria-label="닫기"></button>
   </aside>
   <main>
-    <section class="swiper visual">
-      <h2 class="visual__tit">할인 및 이벤트</h2>
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
-        <div class="swiper-slide">Slide 10</div>
+    <section class="visual">
+      <div class="swiper visual-slide">
+        <h2 class="visual-slide__tit">할인 및 이벤트</h2>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">Slide 10</div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination-mobile">
+        </div>
       </div>
-      <div class="swiper-pagination"></div>
-      <div class="swiper-pagination-mobile">
-      </div>
+      <div class="visual__search">
+        <div class="search">
+         <button class="search__button">
+           타이어, 배터리 검색
+         </button>
+       </div>
+     </div>
     </section>
-    <section class="direct-nav">
+    <section class="direct-nav mt12">
       <h2 class="direct-nav__tit">주요 서비스 바로가기</h2>
       <ul class="direct-nav__list">
         <li class="direct-nav__ico1 direct-nav__item">
@@ -157,8 +161,151 @@
         </li>
       </ul>
     </section>
-    <section class="md-recommend">
-
+    <section class="md-pick">
+      <h2 class="h2">MD 추천</h2>
+      <div class="goods-wrap">
+        <a href="#" class="goods">
+          <figure>
+            <div class="goods__pic">
+              <img src="images/thum_tire.png" alt="" class="goods__thum">
+              <img src="images/logo_hankook.png" alt="" class="goods__logo">
+            </div>
+            <figcaption>
+              <div class="goods__brand mt16">
+                <span class="hide">브랜드</span>넥센
+              </div>
+              <div class="goods__model mt16">
+                <span class="hide">제품모델</span>CP672
+              </div>
+              <div class="goods__tit mt10">
+                <span class="hide">제품사이즈 및 제품명</span>215/55R17(H308)KINERGY EX
+              </div>
+              <div class="goods__priceinfo mt10">
+                <div class="goods__sale">
+                  <span class="hide">할인율</span>61%
+                </div>
+                <div class="goods__price">
+                  <span class="hide">판매가</span>47000원
+                </div>
+              </div>
+              <div class="goods__hash mt12">
+                <span class="hide">해시태그</span>
+                <span>사계절용</span><span>승용차</span><span>절약형</span>
+              </div>
+              <div class="goods__rating mt16">
+                <span class="hide">별점</span>
+                <span class="rating">4.5</span><span class="review">(3027)</span>
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="#" class="goods mt35">
+          <figure>
+            <div class="goods__pic">
+              <img src="images/thum_tire.png" alt="" class="goods__thum">
+              <img src="images/logo_hankook.png" alt="" class="goods__logo">
+            </div>
+            <figcaption>
+              <div class="goods__brand mt16">
+                <span class="hide">브랜드</span>넥센
+              </div>
+              <div class="goods__model mt16">
+                <span class="hide">제품모델</span>CP672
+              </div>
+              <div class="goods__tit mt10">
+                <span class="hide">제품사이즈 및 제품명</span>215/55R17(H308)KINERGY EX
+              </div>
+              <div class="goods__priceinfo mt10">
+                <div class="goods__sale">
+                  <span class="hide">할인율</span>61%
+                </div>
+                <div class="goods__price">
+                  <span class="hide">판매가</span>47000원
+                </div>
+              </div>
+              <div class="goods__hash mt12">
+                <span class="hide">해시태그</span>
+                <span>사계절용</span><span>승용차</span><span>절약형</span>
+              </div>
+              <div class="goods__rating mt16">
+                <span class="hide">별점</span>
+                <span class="rating">4.5</span><span class="review">(3027)</span>
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="#" class="goods mt35">
+          <figure>
+            <div class="goods__pic">
+              <img src="images/thum_tire.png" alt="" class="goods__thum">
+              <img src="images/logo_hankook.png" alt="" class="goods__logo">
+            </div>
+            <figcaption>
+              <div class="goods__brand mt16">
+                <span class="hide">브랜드</span>넥센
+              </div>
+              <div class="goods__model mt16">
+                <span class="hide">제품모델</span>CP672
+              </div>
+              <div class="goods__tit mt10">
+                <span class="hide">제품사이즈 및 제품명</span>215/55R17(H308)KINERGY EX
+              </div>
+              <div class="goods__priceinfo mt10">
+                <div class="goods__sale">
+                  <span class="hide">할인율</span>61%
+                </div>
+                <div class="goods__price">
+                  <span class="hide">판매가</span>47000원
+                </div>
+              </div>
+              <div class="goods__hash mt12">
+                <span class="hide">해시태그</span>
+                <span>사계절용</span><span>승용차</span><span>절약형</span>
+              </div>
+              <div class="goods__rating mt16">
+                <span class="hide">별점</span>
+                <span class="rating">4.5</span><span class="review">(3027)</span>
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+        <a href="#" class="goods mt35">
+          <figure>
+            <div class="goods__pic">
+              <img src="images/thum_tire.png" alt="" class="goods__thum">
+              <img src="images/logo_hankook.png" alt="" class="goods__logo">
+            </div>
+            <figcaption>
+              <div class="goods__brand mt16">
+                <span class="hide">브랜드</span>넥센
+              </div>
+              <div class="goods__model mt16">
+                <span class="hide">제품모델</span>CP672
+              </div>
+              <div class="goods__tit mt10">
+                <span class="hide">제품사이즈 및 제품명</span>215/55R17(H308)KINERGY EX
+              </div>
+              <div class="goods__priceinfo mt10">
+                <div class="goods__sale">
+                  <span class="hide">할인율</span>61%
+                </div>
+                <div class="goods__price">
+                  <span class="hide">판매가</span>47000원
+                </div>
+              </div>
+              <div class="goods__hash mt12">
+                <span class="hide">해시태그</span>
+                <span>사계절용</span><span>승용차</span><span>절약형</span>
+              </div>
+              <div class="goods__rating mt16">
+                <span class="hide">별점</span>
+                <span class="rating">4.5</span><span class="review">(3027)</span>
+              </div>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+      <a href="#" class="btn-more">더보기</a>
     </section>
   </main>
 </body>

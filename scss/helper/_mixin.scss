@@ -49,8 +49,14 @@
 @mixin bg($name, $path: '../images/', $format: 'png', $dir: null, $x: null, $y: null, $color: null, $size: null) {
   background: $color url('#{$path}#{$name}.#{$format}') no-repeat $dir $x $y;
   background-size: $size;
+}
 
-  //
+// Ellipsis
+@mixin ellipsis(){
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 // IR
