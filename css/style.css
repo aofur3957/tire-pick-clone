@@ -275,12 +275,12 @@ ul, li {
   }
 }
 
-.direct-nav, .md-pick {
+.direct-nav, .md-pick, .event__wrap {
   margin: 0 auto;
   width: 1184px;
 }
 @media screen and (max-width: 1184px) {
-  .direct-nav, .md-pick {
+  .direct-nav, .md-pick, .event__wrap {
     width: 100%;
   }
 }
@@ -306,6 +306,9 @@ ul, li {
 }
 .mt16 {
   margin-top: 1.6rem;
+}
+.mt23 {
+  margin-top: 2.3rem;
 }
 .mt35 {
   margin-top: 3.5rem;
@@ -1012,7 +1015,7 @@ ul, li {
 }
 @media screen and (max-width: 1184px) {
   .md-pick {
-    padding: 0 2rem;
+    padding: 0 2rem 6rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1034,6 +1037,57 @@ ul, li {
   .md-pick .btn-more {
     position: static;
     margin-top: 4.5rem;
+  }
+}
+
+.event {
+  background: #c72034;
+  height: 22rem;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .event {
+    height: auto;
+  }
+}
+.event__wrap {
+  background: url("../images/bg_event.png") no-repeat right 11rem center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 1184px) {
+  .event__wrap {
+    background-position: right 2rem center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .event__wrap {
+    background-position: center top;
+    text-align: center;
+    padding-top: 22rem;
+  }
+}
+.event__tit {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.event__strong {
+  font-size: 3rem;
+  line-height: 3.9rem;
+}
+.event__txt {
+  font-size: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .event__txt {
+    display: none;
   }
 }
 

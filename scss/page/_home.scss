@@ -158,7 +158,7 @@ $nav-bg: #e6f2ff, #d6ebe0, #ffebeb, #ffcda9;
   padding-bottom: 6rem;
   @extend %layout-center;
   @include helper.laptop {
-    padding: 0 2rem;
+    padding: 0 2rem 6rem;
   }
   @include helper.mobile {
     padding: 3.5rem 2rem 5.5rem;
@@ -173,5 +173,44 @@ $nav-bg: #e6f2ff, #d6ebe0, #ffebeb, #ffcda9;
       margin-top: 4.5rem;
     }
   } 
+}
+
+// 이벤트
+.event {
+  background: helper.$red;
+  height: 22rem;
+  color: helper.$white;
+  @include helper.mobile {
+    height: auto;
+  }
+  &__wrap {
+    @extend %layout-center;
+    @include helper.bg('bg_event', $dir: right, $x: 11rem, $y: center);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include helper.laptop {
+      background-position: right 2rem center;
+    }
+    @include helper.mobile {
+      background-position: center top;
+      text-align: center;
+      padding-top: 22rem;
+    }
+  }
+  &__tit {
+    @include helper.hide;
+  }
+  &__strong {
+    font-size: 3rem;
+    line-height: 3.9rem;
+  }
+  &__txt {
+    font-size: 2rem;
+    @include helper.mobile {
+      display: none;
+    }
+  }
 }
 
