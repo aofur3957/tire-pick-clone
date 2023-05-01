@@ -2,6 +2,8 @@ $(function () {
   const $btnBar = $('.btn-bar');
   const $mGnb = $('.m-gnb');
   const $btnClose = $('.btn-close');
+  const $btnBrand = $('.btn-all');
+  const $listBrand = $('.brand__list li');
 
   function init(){
     watchEvent();
@@ -12,6 +14,8 @@ $(function () {
   function watchEvent(){
     $btnBar.on('click', showMGnb);
     $btnClose.on('click', hideMGnb);
+    $btnBrand.on('click', showBrand);
+    $btnBrand.on('click', activeBtnBrand);
     $(window).on('resize', removeMGnb);
   }
 
@@ -56,6 +60,17 @@ $(function () {
 
     swiperBullets.controller.control = swiperFraction;
   };
+
+  // 브랜드
+  function showBrand(){
+    $listBrand.each(function(idx, item){
+      if(idx > 7) $(item).toggleClass('on');
+    });
+  }
+
+  function activeBtnBrand(){
+    $btnBrand.toggleClass('active');
+  }
 
   init();
 });

@@ -234,3 +234,66 @@ $nav-bg: #e6f2ff, #d6ebe0, #ffebeb, #ffcda9;
   }
 }
 
+// 브랜드 포커스
+$brand-bg: #4b4947, #241f21, #7f2891, #231e1f, #ff0401, 
+#005ca8, #ff9901, #fff22e, #512581, #213a74, #28529d; 
+  
+
+.brand {
+  @extend %layout-center;
+  @include helper.laptop {
+    padding: 0 2.2rem;
+    text-align: center;
+  } 
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3.5rem 2.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: helper.$black;
+    @include helper.mobile {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem 6.5rem;
+      padding: 0 2.2rem;
+    }
+    @include helper.mini {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__item { 
+    a {
+      &::before {
+        content: '';
+        display: block;
+        padding-top: 46%;
+        margin-bottom: 1.5rem;
+        border-radius: 15px;
+        @include helper.mobile {
+          padding-top: 100%;
+          border-radius: 30%; 
+        }
+      }
+    }
+  }
+  @for $i from 1 to 12 {
+    .brand#{$i} {
+      @include helper.mobile {
+        @if ($i >= 9) {display: none};
+        &.on {
+          display: block;
+        }
+      }
+      a {
+        &::before {
+          @include helper.bg('img_brand#{$i}', $y: center, $size: contain);
+          @include helper.mobile {
+            background-color: list.nth($brand-bg, $i); 
+          }
+        }
+      }
+    }
+  }
+}  
+
+

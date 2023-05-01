@@ -275,12 +275,12 @@ ul, li {
   }
 }
 
-.direct-nav, .md-pick, .event__wrap, .best {
+.direct-nav, .md-pick, .event__wrap, .best, .brand {
   margin: 0 auto;
   width: 1184px;
 }
 @media screen and (max-width: 1184px) {
-  .direct-nav, .md-pick, .event__wrap, .best {
+  .direct-nav, .md-pick, .event__wrap, .best, .brand {
     width: 100%;
   }
 }
@@ -312,6 +312,10 @@ ul, li {
 }
 .mt35 {
   margin-top: 3.5rem;
+}
+
+.mb25 {
+  margin-bottom: 2.5rem;
 }
 
 .search {
@@ -518,6 +522,26 @@ ul, li {
     border-radius: 10px;
     text-align: center;
   }
+}
+.btn-all {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2.5rem;
+  border: 1px solid #dddfe2;
+  border-radius: 2rem;
+  line-height: 4.7rem;
+}
+.btn-all.active::before {
+  transform: rotate(180deg);
+}
+.btn-all::before {
+  content: "";
+  width: 1.6rem;
+  height: 0.9rem;
+  background: url("../images/bu_arr_down.png") no-repeat;
+  background-size: contain;
 }
 
 .visual-slide {
@@ -1114,6 +1138,209 @@ ul, li {
   .best .btn-more {
     position: static;
     margin-top: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 1184px) {
+  .brand {
+    padding: 0 2.2rem;
+    text-align: center;
+  }
+}
+.brand__list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3.5rem 2.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+}
+@media screen and (max-width: 768px) {
+  .brand__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem 6.5rem;
+    padding: 0 2.2rem;
+  }
+}
+@media screen and (max-width: 539px) {
+  .brand__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.brand__item a::before {
+  content: "";
+  display: block;
+  padding-top: 46%;
+  margin-bottom: 1.5rem;
+  border-radius: 15px;
+}
+@media screen and (max-width: 768px) {
+  .brand__item a::before {
+    padding-top: 100%;
+    border-radius: 30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brand .brand1.on {
+    display: block;
+  }
+}
+.brand .brand1 a::before {
+  background: url("../images/img_brand1.png") no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .brand .brand1 a::before {
+    background-color: #4b4947;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brand .brand2.on {
+    display: block;
+  }
+}
+.brand .brand2 a::before {
+  background: url("../images/img_brand2.png") no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .brand .brand2 a::before {
+    background-color: #241f21;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brand .brand3.on {
+    display: block;
+  }
+}
+.brand .brand3 a::before {
+  background: url("../images/img_brand3.png") no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .brand .brand3 a::before {
+    background-color: #7f2891;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brand .brand4.on {
+    display: block;
+  }
+}
+.brand .brand4 a::before {
+  background: url("../images/img_brand4.png") no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .brand .brand4 a::before {
+    background-color: #231e1f;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brand .brand5.on {
+    display: block;
+  }
+}
+.brand .brand5 a::before {
+  background: url("../images/img_brand5.png") no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .brand .brand5 a::before {
+    background-color: #ff0401;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brand .brand6.on {
+    display: block;
+  }
+}
+.brand .brand6 a::before {
+  background: url("../images/img_brand6.png") no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .brand .brand6 a::before {
+    background-color: #005ca8;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brand .brand7.on {
+    display: block;
+  }
+}
+.brand .brand7 a::before {
+  background: url("../images/img_brand7.png") no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .brand .brand7 a::before {
+    background-color: #ff9901;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brand .brand8.on {
+    display: block;
+  }
+}
+.brand .brand8 a::before {
+  background: url("../images/img_brand8.png") no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .brand .brand8 a::before {
+    background-color: #fff22e;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brand .brand9 {
+    display: none;
+  }
+  .brand .brand9.on {
+    display: block;
+  }
+}
+.brand .brand9 a::before {
+  background: url("../images/img_brand9.png") no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .brand .brand9 a::before {
+    background-color: #512581;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brand .brand10 {
+    display: none;
+  }
+  .brand .brand10.on {
+    display: block;
+  }
+}
+.brand .brand10 a::before {
+  background: url("../images/img_brand10.png") no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .brand .brand10 a::before {
+    background-color: #213a74;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brand .brand11 {
+    display: none;
+  }
+  .brand .brand11.on {
+    display: block;
+  }
+}
+.brand .brand11 a::before {
+  background: url("../images/img_brand11.png") no-repeat center;
+  background-size: contain;
+}
+@media screen and (max-width: 768px) {
+  .brand .brand11 a::before {
+    background-color: #28529d;
   }
 }
 
