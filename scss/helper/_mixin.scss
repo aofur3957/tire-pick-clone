@@ -36,13 +36,17 @@
   position: absolute;
   #{$x}: $xvalue;
   #{$y}: $yvalue;
-  @if $xvalue == 50% and $yvalue == 50% {
+  @if $x == left and $y == top and $xvalue == 50% and $yvalue == 50% {
     transform: translate(-50%, -50%);
   }@else if $xvalue == 50% {
-    transform: translateX(-50%);
+    transform: translate(-50%, 0);
   }@else if $yvalue == 50% {
-    transform: translateY(-50%);
+    transform: translate(0,-50%);
   }
+}
+
+@mixin transform($tx: null, $ty: null, $r: null){
+  transform: translate($tx, $ty) rotate($r);
 }
 
 // Background
@@ -57,6 +61,26 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+@mixin multiellipsis($width, $line){
+  width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+
+}
+
+// align
+@mixin align($horizental, $vertical:null){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @if ($horizental == sb){
+    justify-content: space-between;
+  }
 }
 
 // IR

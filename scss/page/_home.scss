@@ -238,7 +238,6 @@ $nav-bg: #e6f2ff, #d6ebe0, #ffebeb, #ffcda9;
 $brand-bg: #4b4947, #241f21, #7f2891, #231e1f, #ff0401, 
 #005ca8, #ff9901, #fff22e, #512581, #213a74, #28529d; 
   
-
 .brand {
   @extend %layout-center;
   @include helper.laptop {
@@ -294,6 +293,13 @@ $brand-bg: #4b4947, #241f21, #7f2891, #231e1f, #ff0401,
       }
     }
   }
-}  
+}
+
+// 타이어픽 리뷰
+.review {
+  @extend %layout-center;
+  position: relative;
+  margin-top: 10rem;
+}
 
 

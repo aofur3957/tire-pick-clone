@@ -1,5 +1,9 @@
 @use '../helper';
 
+.off {
+  display: none;
+}
+
 .mobile {
   display: none;
   @include helper.mobile{
@@ -14,3 +18,4 @@
     width: 100%;
   }
 }
+

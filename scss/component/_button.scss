@@ -22,7 +22,7 @@
     }
   }
   &-all {
-    display: inline-flex;
+    display: none;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -30,6 +30,9 @@
     border: 1px solid helper.$light-grey;
     border-radius: 2rem;
     line-height: 4.7rem;
+    @include helper.mobile {
+      display: inline-flex;
+    }
     &.active {
       &::before {
         transform: rotate(180deg);
