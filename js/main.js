@@ -4,14 +4,11 @@ $(function () {
   const $btnClose = $('.btn-close');
   const $btnBrand = $('.btn-all');
   const $listBrand = $('.brand__list li');
-  const $btnPrevReview = $('.review-button-prev');
-  const $btnNextReview = $('.review-button-next');
-  const $reviewSlideItem = $('.review-slide .swiper-slide');
 
   function init(){
     watchEvent();
     excuteMainSlide();
-    excuteReviewSlide()();
+    excuteReviewSlide();
   }
 
   // 이벤트 감지
@@ -85,22 +82,46 @@ $(function () {
         nextEl: '.review-button-next',
         prevEl: '.review-button-prev',
       },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        540: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        769: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        }
+      },
+      on: {
+        afterInit: function (swiper){
+          const $btnPrev = $(swiper.navigation.prevEl);
+          $btnPrev.addClass('off');
+        },
+        activeIndexChange: function (swiper){
+          const length = swiper.slides.length - 3;
+          const activeIndex = swiper.activeIndex;
+          const $btnPrev = $(swiper.navigation.prevEl);
+          const $btnNext = $(swiper.navigation.nextEl);
+          
+          if (activeIndex === 0) {
+            $btnPrev.addClass('off');
+            $btnNext.removeClass('off');
+          }
+          else if (activeIndex === length) {
+            $btnNext.addClass('off');
+            $btnPrev.removeClass('off');
+          }
+          else {
+            $btnPrev.removeClass('off');
+            $btnNext.removeClass('off');
+          }
+        }
+      }
     }); 
-    return ()=>{
-      $btnNextReview.on('click', ()=>{
-        const length = $reviewSlideItem.length;
-        const currentIndex = swiper.activeIndex;
-        if(currentIndex === length-3) $btnNextReview.addClass('off');
-        if(currentIndex === 1) $btnPrevReview.removeClass('off');
-        
-      })
-      $btnPrevReview.on('click', ()=>{
-        const length = $reviewSlideItem.length;
-        const currentIndex = swiper.activeIndex;
-        if(currentIndex === 0) $btnPrevReview.addClass('off');
-        if(currentIndex === length-4) $btnNextReview.removeClass('off');
-      })
-    }
   }
+
   init();
 });

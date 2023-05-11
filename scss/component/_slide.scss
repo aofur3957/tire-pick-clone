@@ -99,10 +99,17 @@
   }
   &__align {
     @include helper.align('sb');
+    @include helper.mobile {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
   }
   &__company {
     font-size: 1.5rem;
     color: helper.$grey5a;
+    @include helper.mobile {
+      margin-top: 2.3rem;
+    }
   }
   &__service {
     padding: 0.6rem 1rem;

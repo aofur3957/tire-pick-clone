@@ -74,7 +74,7 @@
 }
 
 // align
-@mixin align($horizental, $vertical:null){
+@mixin align($horizental:null, $vertical:null){
   display: flex;
   justify-content: center;
   align-items: center;

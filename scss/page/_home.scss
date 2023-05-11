@@ -298,8 +298,40 @@ $brand-bg: #4b4947, #241f21, #7f2891, #231e1f, #ff0401,
 // 타이어픽 리뷰
 .review {
   @extend %layout-center;
+  @include helper.laptop {
+    width: calc(100% - 35px);
+  }
   position: relative;
   margin-top: 10rem;
 }
 
+// 더 알아보기
+.other {
+  @extend %layout-center;
+  margin-top: 8.7rem;
+  .align {
+    display: flex;
+    gap: 2.4rem;
+  }
+  a {
+    border-radius: 1.5rem;
+    padding: 4rem 5rem;
+    width: 50%;
+  }
+  &__partner {
+    @include helper.bg('bg_other1', $dir: right, $x: 5rem, $y: center, $color: helper.$lightpurple);
+  }
+  &__delivery {
+    @include helper.bg('bg_other2', $dir: right, $x: 5rem, $y: center, $color: helper.$lightblue);
+  }
+  &__tit {
+    color: helper.$black;
+    font-size: 2.4rem;
+  }
+  &__txt {
+    color: helper.$grey5a;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+}
 
