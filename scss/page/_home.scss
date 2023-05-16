@@ -335,3 +335,114 @@ $brand-bg: #4b4947, #241f21, #7f2891, #231e1f, #ff0401,
   }
 }
 
+// 푸터
+.footer {
+  border-top: 1px solid helper.$light-grey;
+  &__container {
+    @extend %layout-center;
+    div {
+      @include helper.align('sb', 'start');
+      margin: 0 1rem;
+      padding: 4.2rem 0 2.8rem;
+      border-bottom: 1px solid helper.$light-grey;
+    }
+  }
+  &__wrap {
+    @extend %layout-center;
+    div {
+      @include helper.align('sb');
+      margin: 0 1rem;
+      padding: 3.3rem 0 4.7rem;
+    }
+  }
+  &__info {
+    font-size: 1.4rem;
+    color: helper.$grey;
+    li {
+      float: left;
+      margin-top: 0.7rem;
+      margin-bottom: 0.7rem;
+    }
+    a {
+      color: helper.$black;
+      text-decoration: underline;
+    }
+    small {
+      color: helper.$black;
+      font-weight: 700;
+    }
+  }
+  &__name {
+    color: helper.$black;
+    position: relative;
+    margin-right: 1rem;
+    padding-right: 1rem;
+    &::after {
+      @include helper.position(right, 0, top, 1px);
+      content: '';
+      width: 1px;
+      height: 13px;
+      background-color: helper.$black;
+    }
+  }
+  &__ceo {
+    color: helper.$black;
+  }
+  &__address {
+    clear: both;
+    position: relative;
+    margin-right: 1rem;
+    padding-right: 1rem;
+    &::after {
+      @include helper.position(right, 0, top, 1px);
+      content: '';
+      width: 1px;
+      height: 13px;
+      background-color: helper.$grey;
+    }
+  }
+  &__business-info {
+    width: 100%;
+    clear: both;
+  }
+  &__contact {
+    li {
+      font-size: 1.4rem;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      strong {
+        font-size: 1.6rem;
+      }
+      em {
+        color: helper.$grey;
+        font-style: normal;
+      }
+    }
+  }
+  &__rule {
+    display: flex;
+    gap: 1.7rem;
+    a {
+      font-size: 1.6rem;
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+  &__sns {
+    display: flex;
+    gap: 1.2rem;
+    li {
+      width: 3.3rem;
+      height: 3.2rem;
+      background-color: helper.$grey-be;
+      border-radius: 0.6rem;
+      a {
+        @include helper.align();
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
