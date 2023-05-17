@@ -3,7 +3,11 @@
 .off {
   display: none;
 }
-
+.pc {
+  @include helper.mobile {
+    display: none;
+  }
+}
 .mobile {
   display: none;
   @include helper.mobile{

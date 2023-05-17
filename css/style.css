@@ -269,6 +269,12 @@ ul, li {
   display: none;
 }
 
+@media screen and (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+}
+
 .mobile {
   display: none;
 }
@@ -321,6 +327,9 @@ ul, li {
 }
 .mt60 {
   margin-top: 6rem;
+}
+.mt115 {
+  margin-top: 11.5rem;
 }
 
 .mb25 {
@@ -572,6 +581,47 @@ ul, li {
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
 }
+.visual-slide .swiper-slide picture {
+  width: 1184px;
+  height: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1184px) {
+  .visual-slide .swiper-slide picture {
+    width: 100%;
+  }
+}
+.visual-slide .swiper-slide picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media screen and (max-width: 768px) {
+  .visual-slide .swiper-slide picture img {
+    object-fit: cover;
+  }
+}
+.visual-slide__item1 {
+  background-color: #77e8ef;
+}
+.visual-slide__item2 {
+  background-color: #fdc8da;
+}
+.visual-slide__item3 {
+  background-color: #48b4e6;
+}
+.visual-slide__item4 {
+  background-color: #ffd972;
+}
+.visual-slide__item5 {
+  background-color: #0064ff;
+}
+.visual-slide__item6 {
+  background-color: #ddffe6;
+}
+.visual-slide__item7 {
+  background-color: #242328;
+}
 .visual-slide .swiper-pagination {
   position: absolute;
   left: 50%;
@@ -587,10 +637,10 @@ ul, li {
   z-index: 10;
   cursor: pointer;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1024px) {
   .visual-slide .swiper-pagination {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 @media screen and (max-width: 768px) {
@@ -622,6 +672,7 @@ ul, li {
   border-radius: 13px;
   font-size: 1.2rem;
   color: #333;
+  z-index: 10000;
 }
 @media screen and (max-width: 768px) {
   .visual-slide .swiper-pagination-mobile {
@@ -845,6 +896,11 @@ ul, li {
 
 .header {
   padding-top: 3.2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  background-color: #fff;
 }
 .header__wrap {
   display: flex;
@@ -887,6 +943,11 @@ ul, li {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .visual {
+    margin-top: 8.2rem;
+  }
+}
 .visual__search {
   padding: 0 2.5rem;
 }
@@ -1452,6 +1513,11 @@ ul, li {
 .other {
   margin-top: 8.7rem;
 }
+@media screen and (max-width: 768px) {
+  .other {
+    padding: 0 2.5rem;
+  }
+}
 .other .align {
   display: flex;
   gap: 2.4rem;
@@ -1460,6 +1526,18 @@ ul, li {
   border-radius: 1.5rem;
   padding: 4rem 5rem;
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .other a {
+    height: 19.2rem;
+    padding: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .other a {
+    background-position: right 2.5rem bottom 2.5rem;
+    background-size: 65px 62px;
+  }
 }
 .other__partner {
   background: #f7f3ff url("../images/bg_other1.png") no-repeat right 5rem center;
@@ -1470,6 +1548,15 @@ ul, li {
 .other__tit {
   color: #333;
   font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+@media screen and (max-width: 768px) {
+  .other__tit {
+    font-size: 2.2rem;
+  }
+  .other__tit span {
+    display: block;
+  }
 }
 .other__txt {
   color: #5a5c60;
@@ -1490,6 +1577,13 @@ ul, li {
   padding: 4.2rem 0 2.8rem;
   border-bottom: 1px solid #dddfe2;
 }
+@media screen and (max-width: 768px) {
+  .footer__container div {
+    flex-direction: column-reverse;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
 .footer__wrap div {
   display: flex;
   justify-content: center;
@@ -1497,6 +1591,13 @@ ul, li {
   justify-content: space-between;
   margin: 0 1rem;
   padding: 3.3rem 0 4.7rem;
+}
+@media screen and (max-width: 768px) {
+  .footer__wrap div {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3.5rem 0 13.2rem;
+  }
 }
 .footer__info {
   font-size: 1.4rem;
@@ -1514,6 +1615,11 @@ ul, li {
 .footer__info small {
   color: #333;
   font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .footer__info {
+    margin-top: 3.5rem;
+  }
 }
 .footer__name {
   color: #333;
@@ -1590,6 +1696,11 @@ ul, li {
   align-items: center;
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .footer__sns {
+    margin-top: 3.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

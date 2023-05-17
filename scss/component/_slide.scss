@@ -1,4 +1,8 @@
 @use '../helper';
+@use 'sass:list';
+
+// 메인 슬라이드
+$color: #77e8ef, #fdc8da, #48b4e6, #ffd972, #0064ff, #ddffe6, #242328;
 
 .visual-slide {
   position: relative;
@@ -7,11 +11,34 @@
   &__tit {
     @include helper.hide;
   }
+  .swiper-slide {
+    picture {
+      width: 1184px;
+      height: 100%;
+      margin: 0 auto;
+      @include helper.laptop {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        @include helper.mobile {
+          object-fit: cover;
+        }
+      }
+    } 
+  }
+  @for $i from 1 to 8 {
+   &__item#{$i}{
+    background-color: list.nth($color, $i);
+   }   
+  }
   .swiper-pagination {
     @include helper.position(left, 50%, bottom, 1rem);
-    @include helper.pc {
+    @include helper.tablet {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+      grid-template-columns: 1fr 1fr 1fr 1fr; 
      }
     @include helper.mobile(){
       display: none;
@@ -51,6 +78,7 @@
     border-radius: 13px;
     font-size: 1.2rem;
     color: helper.$black;
+    z-index: 10000;
     &::after {
       content: '';
       @include helper.position(right, 1.2rem, top, 50%);
@@ -68,6 +96,8 @@
     }
   }
 }
+
+// 리뷰 슬라이드
 
 .review-slide {
   .swiper-slide {

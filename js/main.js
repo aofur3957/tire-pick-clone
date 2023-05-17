@@ -38,15 +38,18 @@ $(function () {
 
   //슬라이드 
   function excuteMainSlide(){
-    $paging = ['ERS 출동 서비스', '4월에도 할인', '토스페이 캐시백', '친구 초대 이벤트', '브리지스톤 할인', '리뷰 이벤트', '앱 설치 혜택', '피렐리 무상교환', '삼성화재 이벤트', '자동세차 100원'];
+    $paging = ['OH월에도 할인', '엔진오일 런칭 혜택', '체험단 모집', '타이어펑크수리 무료', '토스페이 캐시백', '친구 초대 이벤트', '앱 설치 혜택'];
 
     const swiperBullets = new Swiper('.visual-slide', {
       loop: true,
+      autoplay: {
+        delay: 3000
+      },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
         renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + ($paging[index]) + "</span>";
+          return '<span class="' + className + '">' + ($paging[index]) + '</span>';
         }
       }
     })

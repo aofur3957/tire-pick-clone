@@ -5,6 +5,11 @@
 // 헤더
 .header {
   padding-top: 3.2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  background-color: helper.$white;
   &__wrap {
     display: flex;
     justify-content: space-between;
@@ -45,6 +50,9 @@
 
 // 비주얼 
 .visual {
+  @include helper.mobile {
+    margin-top: 8.2rem;
+  }
   &__search {
     padding: 0 2.5rem;
   }
@@ -308,6 +316,9 @@ $brand-bg: #4b4947, #241f21, #7f2891, #231e1f, #ff0401,
 // 더 알아보기
 .other {
   @extend %layout-center;
+  @include helper.mobile {
+    padding: 0 2.5rem;
+  }
   margin-top: 8.7rem;
   .align {
     display: flex;
@@ -317,6 +328,14 @@ $brand-bg: #4b4947, #241f21, #7f2891, #231e1f, #ff0401,
     border-radius: 1.5rem;
     padding: 4rem 5rem;
     width: 50%;
+    @include helper.mobile {
+      height: 19.2rem;
+      padding: 2.5rem;
+      @include helper.mobile {
+        background-position: right 2.5rem bottom 2.5rem;
+        background-size: 65px 62px;
+      }
+    }
   }
   &__partner {
     @include helper.bg('bg_other1', $dir: right, $x: 5rem, $y: center, $color: helper.$lightpurple);
@@ -327,6 +346,11 @@ $brand-bg: #4b4947, #241f21, #7f2891, #231e1f, #ff0401,
   &__tit {
     color: helper.$black;
     font-size: 2.4rem;
+    line-height: 3.2rem;
+    @include helper.mobile {
+      font-size: 2.2rem;
+      span { display: block; }
+    }
   }
   &__txt {
     color: helper.$grey5a;
@@ -345,6 +369,11 @@ $brand-bg: #4b4947, #241f21, #7f2891, #231e1f, #ff0401,
       margin: 0 1rem;
       padding: 4.2rem 0 2.8rem;
       border-bottom: 1px solid helper.$light-grey;
+      @include helper.mobile {
+        flex-direction: column-reverse;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
     }
   }
   &__wrap {
@@ -353,6 +382,11 @@ $brand-bg: #4b4947, #241f21, #7f2891, #231e1f, #ff0401,
       @include helper.align('sb');
       margin: 0 1rem;
       padding: 3.3rem 0 4.7rem;
+      @include helper.mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 3.5rem 0 13.2rem;
+      }
     }
   }
   &__info {
@@ -370,6 +404,9 @@ $brand-bg: #4b4947, #241f21, #7f2891, #231e1f, #ff0401,
     small {
       color: helper.$black;
       font-weight: 700;
+    }
+    @include helper.mobile {
+      margin-top: 3.5rem;
     }
   }
   &__name {
@@ -442,6 +479,9 @@ $brand-bg: #4b4947, #241f21, #7f2891, #231e1f, #ff0401,
         width: 100%;
         height: 100%;
       }
+    }
+    @include helper.mobile {
+      margin-top: 3.5rem;
     }
   }
 }
